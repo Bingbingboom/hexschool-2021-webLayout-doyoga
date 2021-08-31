@@ -79,25 +79,32 @@ $(function() {
     $(this).parent().removeClass('remove');
     $(this).parent().siblings().addClass('remove');
 
-    // 開啟繼續預約按鈕、選擇課程 swiper
+    // 開啟 繼續預約按鈕、選擇課程 swiper
     $('.js-contiBtn, .js-chooseLv').removeClass('d-none');
     
     // 立即預約 - 選擇課程等級 swiper
     let courseLevelSwiper = new Swiper('.courseLevelSwiper', {
       slidesPerView: 1,
-      slidesPerColumn: 3,
-      slidesPerColumnFill: 'row',
       spaceBetween: 30,
+      grid: {
+        rows: 3,
+        fill: 'row',
+      },
       breakpoints: {
         768:{
           slidesPerView: 2,
-          slidesPerColumn: 1,
-          spaceBetween: 30,
+          grid: {
+            rows: 1,
+            fill: 'row',
+          },
         },
-        992:{
+        1200:{
           slidesPerView: 3,
-          slidesPerColumn: 1,
           spaceBetween: 20,
+          grid: {
+            rows: 1,
+            fill: 'row',
+          },
         }
       },
     });
