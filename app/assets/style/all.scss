@@ -1,3 +1,28 @@
+// 外部字體
+@import "base/fonts";
+@import "base/typography";
+
+// BS
 @import "functions";
 @import "./helpers/variables";
+@import "bootstrap-utilities";
+@import "utils/map";  // 新增 BS utils
 @import "bootstrap";
+
+// 自訂 utils
+@import "utils/utils";
+
+// 自訂元件
+@import "components/btn";
+
+// 自定義
+@import "base/base";
+@import "layout";
+
+// pages
+@import "pages/index";
+@import "pages/reservation";
+@import "pages/courses";
+@import "pages/curriculum";
+@import "pages/classroom";
+@import "pages/contact";

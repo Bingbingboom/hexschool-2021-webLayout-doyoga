@@ -1,0 +1,66 @@
+---
+title: DOYOGA
+layout: ./app/layout.ejs
+engine: ejs
+current: reservation-info
+---
+<div class="container mt-3 mt-md-4 mb-5.5 mb-md-5 mb-lg-6.5">
+  <h1 class="fs-2 lh-base fw-normal text-center text-primary mb-1.5 mb-md-1">立即預約</h1>
+  <div class="row justify-content-center mb-2.25">
+    <div class="col-md-6">
+      <ol class="list-unstyled row justify-content-between mb-0">
+        <li class="col-4">
+          <p class="step text-center rounded-normal py-0.75 mb-0">選擇方案</p>
+        </li>
+        <li class="col-4">
+          <p class="step text-center rounded-normal py-0.75 mb-0">填寫資料</p>
+        </li>
+        <li class="col-4">
+          <p class="step text-center rounded-normal active py-0.75 mb-0">完成預約</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 text-center">
+      <span class="material-icons fs-md text-primary mb-1.25">
+        check_circle_outline
+      </span>
+      <h2 class="fs-4 lh-base fw-normal text-primary mb-2">已完成預約，以下是您的預約資訊:</h2>
+      <!-- 預約資訊 accordion -->
+      <div class="accordion mb-1.5" id="accordionOrder">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingOne">
+            <button class="accordion-button lh-base" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              預約資訊
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOrder">
+            <div class="accordion-body text-start">
+              <h4 class="fs-4 lh-base mb-1 text-secondary">
+                <span class="fs-5 lh-base fw-medium text-primary">您預約的是</span>
+                首次體驗課程-基礎
+              </h4>
+              <ul class="list-unstyled text-primary mb-0">
+                <li class="mb-0.5">上課預約報到日：2021/07/21</li>
+                <li class="mb-0.5">預約人：Joanne Chen</li>
+                <li class="mb-0.5">年齡：18 歲</li>
+                <li class="mb-0.5">性別：女</li>
+                <li class="mb-0.5">電子信箱：example123@gmail.com</li>
+                <li>手機號碼：0912-345-678</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4 text-center">
+      <!-- 注意事項 -->
+      <h2 class="fs-4 lh-base fw-normal text-primary mb-0.5">上課注意事項</h2>
+      <p class="text-primary text-start mb-2">第一次上課請提前 10-15 分鐘至櫃檯報到，請攜帶毛巾、水 .穿著運動服、乾淨室內運動鞋。<br>如欲更改體驗時間請提前通知我們喔！</p>
+      <a href="index.html" class="btn btn-secondary w-100 py-0.5">返回首頁</a>
+    </div>
+  </div>
+</div>

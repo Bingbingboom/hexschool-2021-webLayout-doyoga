@@ -1,0 +1,36 @@
+.classroom{
+  .card-img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    @include media-breakpoint-up(md){
+      height: 210px;
+    }
+    @include media-breakpoint-up(lg){
+      height: 350px;
+    }
+    &.ABimg{
+      @include media-breakpoint-up(md){
+        height: 216px;
+      }
+      @include media-breakpoint-up(lg){
+        height: 350px;
+      }
+    }
+  }
+}
+
+// 
+.coursesRecommendSwiper{
+  img{
+    width: 100%;
+    height: 196px;
+    object-fit: cover;
+    @include media-breakpoint-up(md){
+      height: 161px;
+    }
+    @include media-breakpoint-up(lg){
+      height: 196px;
+    }
+  }
+}

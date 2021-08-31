@@ -15,7 +15,7 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #212529 !default; 
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -67,14 +67,15 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       #00cc99; // $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       #907A7B; // $blue !default;
+$secondary:     #C0A4A5; // $gray-600 !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          #F5F0E7; // $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$gray:          #707070;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -86,7 +87,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "gray":       $gray,
+  "white":      $white,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -224,7 +227,7 @@ $enable-grid-classes:         true !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+$enable-negative-margins:     true;//false !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -250,11 +253,31 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  0\.25: $spacer * .25,      // 4
+  0\.5: $spacer * .5,        // 8
+  0\.625: $spacer * .625,    // 10
+  0\.75: $spacer * .75,      // 12
+  0\.875: $spacer * .875,    // 14
+  1: $spacer,                // 16
+  1\.25: $spacer * 1.25,     // 20
+  1\.5: $spacer * 1.5,       // 24
+  1\.75: $spacer * 1.75,     // 28
+  1\.875: $spacer * 1.875,   // 30
+  2: $spacer * 2,            // 32
+  2\.25: $spacer * 2.25,     // 36
+  2\.5: $spacer * 2.5,       // 40
+  2\.75: $spacer * 2.75,     // 44
+  2\.875: $spacer * 2.875,   // 46
+  3: $spacer * 3,            // 48
+  3\.25: $spacer * 3.25,     // 52
+  3\.375: $spacer * 3.375,   // 54
+  3\.5: $spacer * 3.5,       // 56
+  4: $spacer * 4,            // 64
+  4\.5: $spacer * 4.5,       // 72
+  5: $spacer * 5,            // 80
+  5\.5: $spacer * 5.5,       // 88
+  6\.5: $spacer * 6.5,       // 104
+  6\.875: $spacer * 6.875,   // 110
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -343,7 +366,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           1.875rem !default;
 $grid-row-columns:            6 !default;
 
 $gutters: $spacers !default;
@@ -360,6 +383,7 @@ $container-padding-x: $grid-gutter-width * .5 !default;
 // scss-docs-start border-variables
 $border-width:                1px !default;
 $border-widths: (
+  0\.5: 0.5px, // add
   1: 1px,
   2: 2px,
   3: 3px,
@@ -374,6 +398,7 @@ $border-color:                $gray-300 !default;
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
+$border-radius-normal:        1rem !default; //add
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
@@ -432,6 +457,7 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default; //add
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
@@ -441,22 +467,24 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 2.25 !default; // 36px //$font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 1.75 !default; // 28px //$font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.5 !default; // 24px //$font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.25 !default; // 20px //$font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base !default; // 16px //$font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base * 0.875 !default; // 14px //$font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  1: $h1-font-size, // 36px
+  2: $h2-font-size, // 28px
+  3: $h3-font-size, // 24px
+  4: $h4-font-size, // 20px
+  5: $h5-font-size, // 16px
+  6: $h6-font-size, // 14px
+  'lg': $font-size-base * 2.75,
+  'md': $font-size-base * 2.5,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1107,7 +1135,7 @@ $accordion-padding-x:                     1.25rem !default;
 $accordion-color:                         $body-color !default;
 $accordion-bg:                            $body-bg !default;
 $accordion-border-width:                  $border-width !default;
-$accordion-border-color:                  rgba($black, .125) !default;
+$accordion-border-color:                  $secondary;//rgba($black, .125) !default;
 $accordion-border-radius:                 $border-radius !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
 
@@ -1119,20 +1147,20 @@ $accordion-button-padding-x:              $accordion-padding-x !default;
 $accordion-button-color:                  $accordion-color !default;
 $accordion-button-bg:                     $accordion-bg !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-active-bg:              $primary;//tint-color($component-active-bg, 90%) !default;
+$accordion-button-active-color:           $white;//shade-color($primary, 10%) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $accordion-color !default;
-$accordion-icon-active-color:             $accordion-button-active-color !default;
+$accordion-icon-active-color:             $white;//$accordion-button-active-color !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
 $accordion-icon-transform:                rotate(-180deg) !default;
 
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$accordion-icon-color}'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z'/></svg>") !default;
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='#{$accordion-icon-active-color}'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z'/></svg>") !default;
 // scss-docs-end accordion-variables
 
 // Tooltips
@@ -1258,8 +1286,8 @@ $modal-header-padding-x:            $modal-inner-padding !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 $modal-sm:                          300px !default;
-$modal-md:                          500px !default;
-$modal-lg:                          800px !default;
+$modal-md:                          690px;//500px !default;
+$modal-lg:                          920px;//800px !default;
 $modal-xl:                          1140px !default;
 
 $modal-fade-transform:              translate(0, -50px) !default;

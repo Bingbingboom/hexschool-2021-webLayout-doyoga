@@ -1,0 +1,59 @@
+.step{
+  background-color: $info;
+  color: $primary;
+  &.active{
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+// 
+.levelCard{
+  &:hover, &.active{
+    border: 4px solid $white;
+  }
+}
+
+// 
+.scheme .card{
+  &.active,&:hover{
+    border: 4px solid $primary !important;
+  }
+}
+.remove{
+  display: none;
+  @include media-breakpoint-up(lg){
+    display: block;
+  }
+}
+
+// 日期
+.datepicker-cell.selected, .datepicker-cell.selected:hover,.datepicker-cell.today.focused:not(.selected){
+  background-color: $primary;
+}
+.datepicker-cell.today:not(.selected){
+  background-color: $secondary;
+}
+.days{
+  color: $primary;
+}
+.date{
+  max-width: 118px;
+}
+
+// 
+.input{
+  border: 1px solid $secondary;
+  border-radius: 4px;
+  padding: 6px 12px;
+  &::placeholder{
+    color: $primary;
+  }
+}
+
+// 
+.accordion-button::after{
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}

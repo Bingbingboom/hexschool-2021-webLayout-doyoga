@@ -6,54 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
+    <!-- Adobe web fonts -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'ibi1qqf',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- vanillajs-datepicker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+    <!-- 自定義 -->
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <!-- 右側社群 icon -->
+    <div class="fixedIcon position-fixed me-1 d-none d-lg-block">
+      <ul class="list-unstyled mb-0">
+        <li class="mb-0.5">
+          <a href="#" class="link-primary">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="mb-0.5">
+          <a href="#" class="link-primary">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link-primary">
+            <i class="fab fa-line"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 表頭導覽 -->
+    <nav class="navbar navbar-expand-lg navbar-gray bg-info py-1 py-lg-1.25">
+      <div class="container">
+        <!-- Logo -->
+        <a class="logo navbar-brand link-secondary fs-3" href="index.html">DOYOGA</a>
+        <button class="navbar-toggler link-primary p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-icons fs-lg">
+            reorder
+          </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <div class="collapse navbar-collapse justify-content-lg-between" id="navbarSupportedContent">
+          <div class="d-none d-lg-block"></div>
+          <ul class="navbar-nav mb-1 mb-lg-0">
+            <li class="nav-item text-center">
+              <a class="nav-link link-gray fw-light px-1" aria-current="page" href="courses.html">課程介紹</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+            <li class="nav-item text-center">
+              <a class="nav-link link-gray fw-light px-1" href="classroom.html">瑜珈空間</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <li class="nav-item text-center">
+              <a class="nav-link link-gray fw-light px-1" href="curriculum.html">當月課表</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <div class="d-flex">
+            <a href="reservation.html" class="btn btn-outline-primary fw-normal border-0.5 rounded-normal w-50 me-1 px-1 py-0.5">立即預約</a>
+            <a href="contact.html" class="btn btn-outline-primary fw-normal border-0.5 rounded-normal w-50 px-1 py-0.5">聯絡我們</a>
+          </div>
         </div>
       </div>
     </nav>
 
     <%- contents %>
 
-    <footer class="footer">
-      footer
+    <!-- 表尾 -->
+    <footer class="bg-primary pb-2">
+      <div class="container py-1.5 py-md-2">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-md-8 col-lg-5">
+            <label for="subscribe" class="form-label text-white fs-3 fs-md-2">現在訂閱，獲得課程優惠碼！</label>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="input-group">
+                <input type="email" id="subscribe" class="form-control subscribeInput text-primary py-0.5 px-1" placeholder="輸入您的電子信箱" aria-label="Subscribe email" aria-describedby="subscribe-button">
+                <button class="btn btn-secondary subscrieBtn py-0.5 px-1" type="button" id="subscribe-button">訂閱</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="divider bg-white my-0 border-1 border-white">
+      <div class="container pt-1.5 pt-md-2 position-relative">
+          <div class="d-flex justify-content-between align-items-center mb-0.5">
+            <a href="index.html" class="logo fs-3 link-white">DOYOGA</a>
+            <ul class="list-unstyled d-flex mb-0">
+              <li><a href="#" class="link-white me-0.5">
+                <i class="fab fa-facebook fs-3"></i>
+              </a></li>
+              <li><a href="#" class="link-white me-0.5">
+                <i class="fab fa-instagram fs-3"></i>
+              </a></li>
+              <li><a href="#" class="link-white">
+                <i class="fab fa-line fs-3"></i>
+              </a></li>
+            </ul>
+          </div>
+          <ul class="list-unstyled mb-0.5 mb-md-0">
+            <li><a href="courses.html" class="fw-light link-white mb-0.5">課程介紹</a></li>
+            <li><a href="classroom.html" class="fw-light link-white mb-0.5">瑜珈空間</a></li>
+            <li><a href="curriculum.html" class="fw-light link-white mb-0.5">當月課表</a></li>
+          </ul>
+          <p class="copyright text-white mb-0">© 2021. All Rights Reserved.</p>
+      </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

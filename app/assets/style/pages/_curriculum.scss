@@ -1,0 +1,32 @@
+.curriculum{
+  table{
+    white-space: nowrap;
+  }
+  &-scrollbar{
+    &::-webkit-scrollbar{
+      border-radius: 16px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: $primary;
+      opacity: 0.5;
+      border-radius: 16px;
+    }
+  }
+}
+
+.notice{
+  &-num{
+    font-family: $silom;
+    font-size: 32px;
+    color: $primary;
+  }
+  &-text{
+    border: 1px solid $secondary;
+    border-radius: 16px;
+    flex-grow: 1;
+    padding: 16px;
+    @include media-breakpoint-up(md){
+      padding: 16px 24px;
+    }
+  }
+}

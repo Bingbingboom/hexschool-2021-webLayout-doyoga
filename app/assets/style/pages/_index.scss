@@ -1,0 +1,135 @@
+// Banner
+.banner{
+  background-image: url(../images/photo-1612157777902-5382bc6e864b.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  height: 560px;
+  @include media-breakpoint-up(md){
+    height: 582px;
+  }
+}
+
+// 感受身心，活在當下
+.willGive{
+  &-img{
+    object-fit: cover;
+    height: 420px;
+    @include media-breakpoint-up(md){
+      height: 252px;
+    }
+    @include media-breakpoint-up(lg){
+      height: 420px;
+    }
+  }
+}
+
+// 頂尖師資、專業教學
+.teaching{
+  &-height{
+    @include media-breakpoint-up(lg){
+      height: 628px;
+    }
+  }
+  &-img{
+    object-fit: cover;
+  }
+  &-body{
+    z-index: 1;
+  }
+  &-photo{
+    width: 48px;
+    height: 48px;
+    @include media-breakpoint-up(md){
+      height: auto;
+      width: auto;
+    }
+  }
+}
+
+// 舒適空間、靜心放鬆
+.relax{
+  &-img{
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+    @include media-breakpoint-up(md){
+      height: 266px;
+    }
+    @include media-breakpoint-up(lg){
+      height: 444px;
+    }
+    &-sm{
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include media-breakpoint-up(md){
+        height: 117px;
+      }
+      @include media-breakpoint-up(lg){
+        height: 207px;
+      }
+    }
+  }
+}
+
+// 精心設計、課程多元
+.course{
+  .row{
+    @include media-breakpoint-up(lg){
+      height: 445px;
+    }
+  }
+  &-img{
+    height: 165px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include media-breakpoint-up(md){
+      height: 150px;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide{
+    height: 445px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// 方案選擇
+.scheme{
+  &-img{
+    height: 243px;
+    object-fit: cover;
+    @include media-breakpoint-up(md){
+      height: 238px;
+    }
+    @include media-breakpoint-up(md){
+      height: 243px;
+    }
+  }
+}
+
+// 
+.comment{
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: '';
+  }
+  .swiper-button-next, .swiper-button-prev{
+    position: unset;
+    width: auto;
+    height: auto;
+  }
+}

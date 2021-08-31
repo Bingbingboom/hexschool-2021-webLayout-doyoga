@@ -1,0 +1,36 @@
+.btn-primary{
+    color: $white;
+    &:hover{
+        color: $white;
+    }
+    &:focus{
+        color: $white;
+    }
+}
+.btn-secondary{
+    color: $white;
+    &:hover{
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+    }
+    &:focus{
+        color: $white;
+    }
+}
+.btn-info{
+    color: $gray;
+    &:hover{
+        color: $white;
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+    &:focus{
+        color: $white;
+    }
+}
+
+// outline
+.btn-outline-primary:hover{
+    color: $white;
+}
