@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOYOGA</title>
+    <!-- Adobe web fonts -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'ibi1qqf',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- vanillajs-datepicker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+    <!-- 自定義 -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <!-- 右側社群 icon -->
+    <div class="fixedIcon position-fixed me-1 d-none d-lg-block">
+      <ul class="list-unstyled mb-0">
+        <li class="mb-0.5">
+          <a href="#" class="link-primary">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="mb-0.5">
+          <a href="#" class="link-primary">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link-primary">
+            <i class="fab fa-line"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 表頭導覽 -->
+    <nav class="navbar navbar-expand-lg navbar-gray bg-info py-1 py-lg-1.25">
+      <div class="container">
+        <!-- Logo -->
+        <a class="logo navbar-brand link-secondary fs-3" href="index.html">DOYOGA</a>
+        <button class="navbar-toggler link-primary p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-icons fs-lg">
+            reorder
+          </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-lg-between" id="navbarSupportedContent">
+          <div class="d-none d-lg-block"></div>
+          <ul class="navbar-nav mb-1 mb-lg-0">
+            <li class="nav-item text-center">
+              <a class="nav-link link-gray fw-light px-1" aria-current="page" href="courses.html">課程介紹</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link link-gray fw-light px-1" href="classroom.html">瑜珈空間</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link link-gray fw-light px-1" href="curriculum.html">當月課表</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="reservation.html" class="btn btn-outline-primary fw-normal border-0.5 rounded-normal w-50 me-1 px-1 py-0.5">立即預約</a>
+            <a href="contact.html" class="btn btn-outline-primary fw-normal border-0.5 rounded-normal w-50 px-1 py-0.5">聯絡我們</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 mt-md-4 mb-5.5 mb-md-5 mb-lg-6.5">
+  <h1 class="fs-2 lh-base fw-normal text-center text-primary mb-1.5 mb-md-1">立即預約</h1>
+  <div class="row justify-content-center mb-2.25">
+    <div class="col-md-6">
+      <ol class="list-unstyled row justify-content-between mb-0">
+        <li class="col-4">
+          <p class="step text-center rounded-normal py-0.75 mb-0">選擇方案</p>
+        </li>
+        <li class="col-4">
+          <p class="step text-center rounded-normal py-0.75 mb-0">填寫資料</p>
+        </li>
+        <li class="col-4">
+          <p class="step text-center rounded-normal active py-0.75 mb-0">完成預約</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 text-center">
+      <span class="material-icons fs-md text-primary mb-1.25">
+        check_circle_outline
+      </span>
+      <h2 class="fs-4 lh-base fw-normal text-primary mb-2">已完成預約，以下是您的預約資訊:</h2>
+      <!-- 預約資訊 accordion -->
+      <div class="accordion mb-1.5" id="accordionOrder">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="headingOne">
+            <button class="accordion-button lh-base" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              預約資訊
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOrder">
+            <div class="accordion-body text-start">
+              <h4 class="fs-4 lh-base mb-1 text-secondary">
+                <span class="fs-5 lh-base fw-medium text-primary">您預約的是</span>
+                首次體驗課程-基礎
+              </h4>
+              <ul class="list-unstyled text-primary mb-0">
+                <li class="mb-0.5">上課預約報到日：2021/07/21</li>
+                <li class="mb-0.5">預約人：Joanne Chen</li>
+                <li class="mb-0.5">年齡：18 歲</li>
+                <li class="mb-0.5">性別：女</li>
+                <li class="mb-0.5">電子信箱：example123@gmail.com</li>
+                <li>手機號碼：0912-345-678</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4 text-center">
+      <!-- 注意事項 -->
+      <h2 class="fs-4 lh-base fw-normal text-primary mb-0.5">上課注意事項</h2>
+      <p class="text-primary text-start mb-2">第一次上課請提前 10-15 分鐘至櫃檯報到，請攜帶毛巾、水 .穿著運動服、乾淨室內運動鞋。<br>如欲更改體驗時間請提前通知我們喔！</p>
+      <a href="index.html" class="btn btn-secondary w-100 py-0.5">返回首頁</a>
+    </div>
+  </div>
+</div>
+
+    <!-- 表尾 -->
+    <footer class="bg-primary pb-2">
+      <div class="container py-1.5 py-md-2">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-md-8 col-lg-5">
+            <label for="subscribe" class="form-label text-white fs-3 fs-md-2">現在訂閱，獲得課程優惠碼！</label>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="input-group">
+                <input type="email" id="subscribe" class="form-control subscribeInput text-primary py-0.5 px-1" placeholder="輸入您的電子信箱" aria-label="Subscribe email" aria-describedby="subscribe-button">
+                <button class="btn btn-secondary subscrieBtn py-0.5 px-1" type="button" id="subscribe-button">訂閱</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="divider bg-white my-0 border-1 border-white">
+      <div class="container pt-1.5 pt-md-2 position-relative">
+          <div class="d-flex justify-content-between align-items-center mb-0.5">
+            <a href="index.html" class="logo fs-3 link-white">DOYOGA</a>
+            <ul class="list-unstyled d-flex mb-0">
+              <li><a href="#" class="link-white me-0.5">
+                <i class="fab fa-facebook fs-3"></i>
+              </a></li>
+              <li><a href="#" class="link-white me-0.5">
+                <i class="fab fa-instagram fs-3"></i>
+              </a></li>
+              <li><a href="#" class="link-white">
+                <i class="fab fa-line fs-3"></i>
+              </a></li>
+            </ul>
+          </div>
+          <ul class="list-unstyled mb-0.5 mb-md-0">
+            <li><a href="courses.html" class="fw-light link-white mb-0.5">課程介紹</a></li>
+            <li><a href="classroom.html" class="fw-light link-white mb-0.5">瑜珈空間</a></li>
+            <li><a href="curriculum.html" class="fw-light link-white mb-0.5">當月課表</a></li>
+          </ul>
+          <p class="copyright text-white mb-0">© 2021. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
